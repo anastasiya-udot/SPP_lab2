@@ -1,0 +1,9 @@
+E:\documents\спп\TraceParser\TraceParser\bin\Debug\TraceParser.exe.config
+E:\documents\спп\TraceParser\TraceParser\bin\Debug\TraceParser.exe
+E:\documents\спп\TraceParser\TraceParser\bin\Debug\TraceParser.pdb
+E:\documents\спп\TraceParser\TraceParser\obj\Debug\TraceParser.csprojResolveAssemblyReference.cache
+E:\documents\спп\TraceParser\TraceParser\obj\Debug\TraceParser.Form1.resources
+E:\documents\спп\TraceParser\TraceParser\obj\Debug\TraceParser.Properties.Resources.resources
+E:\documents\спп\TraceParser\TraceParser\obj\Debug\TraceParser.csproj.GenerateResource.Cache
+E:\documents\спп\TraceParser\TraceParser\obj\Debug\TraceParser.exe
+E:\documents\спп\TraceParser\TraceParser\obj\Debug\TraceParser.pdb

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <thread id="10">
+    <method name="Main" package="Test.Program" paramsCount="1" time="1164.777" />
+  </thread>
+  <thread id="11">
+    <method name="SomeTestMethod1" package="Test.Program" paramsCount="0" time="1071.0771">
+      <method name="SomeTestMethod2" package="Test.Program" paramsCount="0" time="843.1851">
+        <method name="SomeTestMethod3" package="Test.Program" paramsCount="0" time="402.30240000000003">
+          <method name="SomeTestMethod4" package="Test.Program" paramsCount="0" time="214.8013" />
+        </method>
+        <method name="SomeTestMethod4" package="Test.Program" paramsCount="0" time="206.35760000000002" />
+      </method>
+    </method>
+  </thread>
+</root>

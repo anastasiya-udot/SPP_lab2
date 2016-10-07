@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <thread id="9">
+    <method name="Main" package="Test.Program" paramsCount="1" time="1160.7507" />
+  </thread>
+  <thread id="11">
+    <method name="SomeTestMethod2" package="Test.Program" paramsCount="0" time="823.12560000000008">
+      <method name="SomeTestMethod3" package="Test.Program" paramsCount="0" time="405.7215">
+        <method name="SomeTestMethod4" package="Test.Program" paramsCount="0" time="249.47060000000002" />
+      </method>
+      <method name="SomeTestMethod4" package="Test.Program" paramsCount="0" time="187.5016" />
+    </method>
+  </thread>
+  <thread id="10">
+    <method name="SomeTestMethod2" package="Test.Program" paramsCount="0" time="863.8723">
+      <method name="SomeTestMethod3" package="Test.Program" paramsCount="0" time="436.97220000000004">
+        <method name="SomeTestMethod4" package="Test.Program" paramsCount="0" time="218.2195" />
+      </method>
+      <method name="SomeTestMethod4" package="Test.Program" paramsCount="0" time="171.87730000000002" />
+    </method>
+  </thread>
+  <thread id="12">
+    <method name="SomeTestMethod2" package="Test.Program" paramsCount="0" time="801.8332">
+      <method name="SomeTestMethod3" package="Test.Program" paramsCount="0" time="421.2893">
+        <method name="SomeTestMethod4" package="Test.Program" paramsCount="0" time="249.41500000000002" />
+      </method>
+      <method name="SomeTestMethod4" package="Test.Program" paramsCount="0" time="140.6292" />
+    </method>
+  </thread>
+  <thread id="13">
+    <method name="SomeTestMethod2" package="Test.Program" paramsCount="0" time="770.5286">
+      <method name="SomeTestMethod3" package="Test.Program" paramsCount="0" time="374.4169">
+        <method name="SomeTestMethod4" package="Test.Program" paramsCount="0" time="202.5088" />
+      </method>
+      <method name="SomeTestMethod4" package="Test.Program" paramsCount="0" time="171.87900000000002" />
+    </method>
+  </thread>
+  <thread id="14">
+    <method name="SomeTestMethod3" package="Test.Program" paramsCount="0" time="280.66700000000003">
+      <method name="SomeTestMethod4" package="Test.Program" paramsCount="0" time="171.2902" />
+    </method>
+  </thread>
+  <thread id="15">
+    <method name="SomeTestMethod1" package="Test.Program" paramsCount="0" time="1113.8214">
+      <method name="SomeTestMethod2" package="Test.Program" paramsCount="0" time="910.6797">
+        <method name="SomeTestMethod3" package="Test.Program" paramsCount="0" time="436.91490000000005">
+          <method name="SomeTestMethod4" package="Test.Program" paramsCount="0" time="233.792" />
+        </method>
+        <method name="SomeTestMethod4" package="Test.Program" paramsCount="0" time="224.2835" />
+      </method>
+    </method>
+  </thread>
+  <thread id="16">
+    <method name="SomeTestMethod2" package="Test.Program" paramsCount="0" time="708.0285">
+      <method name="SomeTestMethod3" package="Test.Program" paramsCount="0" time="436.9175">
+        <method name="SomeTestMethod4" package="Test.Program" paramsCount="0" time="233.792" />
+      </method>
+      <method name="SomeTestMethod4" package="Test.Program" paramsCount="0" time="156.2517" />
+    </method>
+  </thread>
+  <thread id="17">
+    <method name="SomeTestMethod1" package="Test.Program" paramsCount="0" time="723.65320000000008">
+      <method name="SomeTestMethod2" package="Test.Program" paramsCount="0" time="546.2951">
+        <method name="SomeTestMethod3" package="Test.Program" paramsCount="0" time="233.792">
+          <method name="SomeTestMethod4" package="Test.Program" paramsCount="0" time="105.5464" />
+        </method>
+        <method name="SomeTestMethod4" package="Test.Program" paramsCount="0" time="187.4409" />
+      </method>
+    </method>
+  </thread>
+  <thread id="18">
+    <method name="SomeTestMethod1" package="Test.Program" paramsCount="0" time="785.6389">
+      <method name="SomeTestMethod2" package="Test.Program" paramsCount="0" time="661.142">
+        <method name="SomeTestMethod3" package="Test.Program" paramsCount="0" time="280.664">
+          <method name="SomeTestMethod4" package="Test.Program" paramsCount="0" time="171.25900000000002" />
+        </method>
+        <method name="SomeTestMethod4" package="Test.Program" paramsCount="0" time="234.3821" />
+      </method>
+    </method>
+  </thread>
+  <thread id="19">
+    <method name="SomeTestMethod2" package="Test.Program" paramsCount="0" time="629.9486">
+      <method name="SomeTestMethod3" package="Test.Program" paramsCount="0" time="343.1671">
+        <method name="SomeTestMethod4" package="Test.Program" paramsCount="0" time="121.2031" />
+      </method>
+      <method name="SomeTestMethod4" package="Test.Program" paramsCount="0" time="171.87900000000002" />
+    </method>
+  </thread>
+  <thread id="20">
+    <method name="SomeTestMethod3" package="Test.Program" paramsCount="0" time="343.1671">
+      <method name="SomeTestMethod4" package="Test.Program" paramsCount="0" time="233.792" />
+    </method>
+  </thread>
+  <thread id="21">
+    <method name="SomeTestMethod2" package="Test.Program" paramsCount="0" time="785.6389">
+      <method name="SomeTestMethod3" package="Test.Program" paramsCount="0" time="311.91470000000004">
+        <method name="SomeTestMethod4" package="Test.Program" paramsCount="0" time="202.5413" />
+      </method>
+      <method name="SomeTestMethod4" package="Test.Program" paramsCount="0" time="249.9482" />
+    </method>
+  </thread>
+  <thread id="22">
+    <method name="SomeTestMethod2" package="Test.Program" paramsCount="0" time="863.8223">
+      <method name="SomeTestMethod3" package="Test.Program" paramsCount="0" time="390.03950000000003">
+        <method name="SomeTestMethod4" package="Test.Program" paramsCount="0" time="186.9162" />
+      </method>
+      <method name="SomeTestMethod4" package="Test.Program" paramsCount="0" time="218.72490000000002" />
+    </method>
+  </thread>
+  <thread id="23">
+    <method name="SomeTestMethod3" package="Test.Program" paramsCount="0" time="452.543">
+      <method name="SomeTestMethod4" package="Test.Program" paramsCount="0" time="218.1652" />
+    </method>
+  </thread>
+  <thread id="24">
+    <method name="SomeTestMethod2" package="Test.Program" paramsCount="0" time="832.5737">
+      <method name="SomeTestMethod3" package="Test.Program" paramsCount="0" time="468.1361">
+        <method name="SomeTestMethod4" package="Test.Program" paramsCount="0" time="249.4172" />
+      </method>
+      <method name="SomeTestMethod4" package="Test.Program" paramsCount="0" time="239.8924" />
+    </method>
+  </thread>
+  <thread id="25">
+    <method name="SomeTestMethod3" package="Test.Program" paramsCount="0" time="452.543">
+      <method name="SomeTestMethod4" package="Test.Program" paramsCount="0" time="202.5413" />
+    </method>
+  </thread>
+</root>

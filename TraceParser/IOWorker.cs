@@ -99,7 +99,7 @@ namespace TraceParser
                 }
             }
         }
-        public void SetIOWorkerProperties(TabPageManager tabPageManager, string filePath)
+        public void SetIOWorkerProperties(string filePath)
         {
             this.FilePath = filePath;
             this.FileName = Path.GetFileName(this.FilePath);

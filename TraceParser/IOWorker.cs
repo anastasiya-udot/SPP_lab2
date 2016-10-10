@@ -103,7 +103,6 @@ namespace TraceParser
         {
             this.FilePath = filePath;
             this.FileName = Path.GetFileName(this.FilePath);
-            tabPageManager.TreeViewBuilder = new TreeViewBuilder(this.FilePath);
         }
 
         public bool OpenFile(TabPageManager tabPageManager)
@@ -118,6 +117,7 @@ namespace TraceParser
                     if ((stream = openFileDialog.OpenFile()) != null)
                     {
                         SetIOWorkerProperties(tabPageManager, (stream as FileStream).Name);
+                        tabPageManager.TreeViewBuilder = new TreeViewBuilder(this.FilePath);
                         return true;
                     }
                 }

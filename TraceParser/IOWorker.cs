@@ -116,8 +116,7 @@ namespace TraceParser
                 {
                     if ((stream = openFileDialog.OpenFile()) != null)
                     {
-                        SetIOWorkerProperties(tabPageManager, (stream as FileStream).Name);
-                        tabPageManager.TreeViewBuilder = new TreeViewBuilder(this.FilePath);
+                        SetIOWorkerProperties((stream as FileStream).Name);
                         return true;
                     }
                 }

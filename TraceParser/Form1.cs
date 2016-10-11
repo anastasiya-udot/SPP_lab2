@@ -80,6 +80,7 @@ namespace TraceParser
         {
 
             TabPage newTabPage = new TabPage(tabPageManager.IOWorker.FileName);
+            tabPageManager.TreeViewBuilder = new TreeViewBuilder(tabPageManager.IOWorker.FilePath);
             newTabPage.Controls.Add(tabPageManager.TreeViewBuilder.TreeView);
             tabControl.TabPages.Add(newTabPage);
             tabControl.SelectedTab = newTabPage;

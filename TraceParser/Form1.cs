@@ -56,7 +56,7 @@ namespace TraceParser
                     TabPageManager tabPageManager = new TabPageManager();
                     IOWorker io = new IOWorker();
                     tabPageManager.IOWorker = io;
-                    io.SetIOWorkerProperties(tabPageManager, Path.GetFullPath(file));
+                    io.SetIOWorkerProperties(Path.GetFullPath(file));
                     CreateNewTabPage(tabPageManager);
                     CreateContextMenu(tabPageManager);
                 }

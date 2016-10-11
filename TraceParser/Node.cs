@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using System.Windows.Forms;
 
 namespace TraceParser
 {
@@ -53,34 +54,41 @@ namespace TraceParser
 
         public void DefineProperty(string attributeString, string valueString)
         {
-            switch (attributeString)
+            try
             {
-                case "id":
-                    {
-                        int id = Convert.ToInt32(valueString);
-                        if (id < 0) throw new Exception();
-                        this.Id = id;
-                    } break;
-                case "name":
-                    {
-                        this.Name = valueString;
-                    } break;
-                case "package":
-                    {
-                        this.Package = valueString;
-                    } break;
-                case "paramsCount":
-                    {
-                        int paramsCount = Convert.ToInt32(valueString);
-                        if (paramsCount < 0) throw new Exception();
-                        this.ParamsCount = paramsCount;
-                    } break;
-                case "time":
-                    {
-                        double time = Convert.ToDouble(valueString.Replace(".", ","));
-                        if (time < 0)  throw new Exception(); 
-                        this.Time = time;
-                    } break;
+                switch (attributeString)
+                {
+                    case "id":
+                        {
+                            int id = Convert.ToInt32(valueString);
+                            if (id < 0) throw new Exception();
+                            this.Id = id;
+                        } break;
+                    case "name":
+                        {
+                            this.Name = valueString;
+                        } break;
+                    case "package":
+                        {
+                            this.Package = valueString;
+                        } break;
+                    case "paramsCount":
+                        {
+                            int paramsCount = Convert.ToInt32(valueString);
+                            if (paramsCount < 0) throw new Exception();
+                            this.ParamsCount = paramsCount;
+                        } break;
+                    case "time":
+                        {
+                            double time = Convert.ToDouble(valueString.Replace(".", ","));
+                            if (time < 0) throw new Exception();
+                            this.Time = time;
+                        } break;
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("XML data is not correct");
             }
         }
 

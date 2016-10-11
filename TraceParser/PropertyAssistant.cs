@@ -70,12 +70,15 @@ namespace TraceParser
         {
             TreeNode parentTreeNode = treeNode.Parent;
             Node parentNode = (Node)parentTreeNode.Tag;
-            while (parentNode.Tag != "thread")
+            if (parentNode != null)
             {
-                parentNode.Time += timeDifference;
-                parentTreeNode.Text = parentNode.FormTreeViewString();
-                parentTreeNode = parentTreeNode.Parent;
-                parentNode = (Node)parentTreeNode.Tag;
+                while ((parentNode.Tag != "thread") || (parentNode.Tag != "root"))
+                {
+                    parentNode.Time += timeDifference;
+                    parentTreeNode.Text = parentNode.FormTreeViewString();
+                    parentTreeNode = parentTreeNode.Parent;
+                    parentNode = (Node)parentTreeNode.Tag;
+                }
             }
         }
 

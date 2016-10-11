@@ -26,7 +26,6 @@ namespace TraceParser
         private OpenFileDialog CreateOpenFileDialog()
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.InitialDirectory = "d:\\";
             openFileDialog.Filter = "XML files (*.xml)|*.xml";
             openFileDialog.FilterIndex = 1;
             openFileDialog.RestoreDirectory = true;
@@ -99,11 +98,10 @@ namespace TraceParser
                 }
             }
         }
-        public void SetIOWorkerProperties(TabPageManager tabPageManager, string filePath)
+        public void SetIOWorkerProperties(string filePath)
         {
             this.FilePath = filePath;
             this.FileName = Path.GetFileName(this.FilePath);
-            tabPageManager.TreeViewBuilder = new TreeViewBuilder(this.FilePath);
         }
 
         public bool OpenFile(TabPageManager tabPageManager)
@@ -117,7 +115,7 @@ namespace TraceParser
                 {
                     if ((stream = openFileDialog.OpenFile()) != null)
                     {
-                        SetIOWorkerProperties(tabPageManager, (stream as FileStream).Name);
+                        SetIOWorkerProperties((stream as FileStream).Name);
                         return true;
                     }
                 }

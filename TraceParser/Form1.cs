@@ -56,7 +56,7 @@ namespace TraceParser
                     TabPageManager tabPageManager = new TabPageManager();
                     IOWorker io = new IOWorker();
                     tabPageManager.IOWorker = io;
-                    io.SetIOWorkerProperties(tabPageManager, Path.GetFullPath(file));
+                    io.SetIOWorkerProperties(Path.GetFullPath(file));
                     CreateNewTabPage(tabPageManager);
                     CreateContextMenu(tabPageManager);
                 }
@@ -73,7 +73,6 @@ namespace TraceParser
             if (tabControl.SelectedTab != null)
             {
                 currentPage = tabControl.SelectedTab;
-                TabPageManager tpm = (TabPageManager)currentPage.Tag;
             }
         }
 
@@ -145,6 +144,7 @@ namespace TraceParser
             tabPageManager.IOWorker = io;
             if (io.OpenFile(tabPageManager))
             {
+                tabPageManager.TreeViewBuilder = new TreeViewBuilder(io.FilePath);
                 CreateNewTabPage(tabPageManager);
                 CreateContextMenu(tabPageManager);
             }

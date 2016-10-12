@@ -88,7 +88,7 @@ namespace TraceParser
             }
             catch (Exception e)
             {
-                MessageBox.Show("XML data is not correct");
+                MessageBox.Show(String.Format("XML data are not correct: {0} = \"{1}\"", attributeString, valueString) );
             }
         }
 

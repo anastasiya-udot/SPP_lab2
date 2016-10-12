@@ -72,9 +72,17 @@ namespace TraceParser
             Node parentNode = (Node)parentTreeNode.Tag;
             if (parentNode != null)
             {
-                while ((parentNode.Tag != "thread") || (parentNode.Tag != "root"))
+                while ((parentNode.Tag != "thread") && (parentNode.Tag != "root"))
                 {
-                    parentNode.Time += timeDifference;
+                    if ((parentNode.Time + timeDifference) > 0)
+                    {
+                        parentNode.Time += timeDifference;
+                    }
+                    else
+                    {
+                        parentNode.Time = 0;
+                    }
+
                     parentTreeNode.Text = parentNode.FormTreeViewString();
                     parentTreeNode = parentTreeNode.Parent;
                     parentNode = (Node)parentTreeNode.Tag;

@@ -105,7 +105,8 @@ namespace TraceParser
             if (this.Tag == "thread")
             {
                 string id = " id=\"" + this.Id + "\"";
-                return this.Tag + " " + id;
+                string time = " time=\"" + this.Time + "\"";
+                return this.Tag + " " + id + time;
             }
             return this.Tag;
         }
@@ -116,7 +117,7 @@ namespace TraceParser
             if (this.Tag == "method")
                 return attributes =  new string [] {"name", "package","paramsCount","time"};               
             else
-                return attributes = new string[] { "id" };
+                return attributes = new string[] { "id", "time" };
         }
 
     }

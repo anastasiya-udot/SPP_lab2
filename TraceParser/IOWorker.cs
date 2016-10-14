@@ -104,7 +104,26 @@ namespace TraceParser
             this.FileName = Path.GetFileName(this.FilePath);
         }
 
-        public bool OpenFile(TabPageManager tabPageManager)
+        private bool CheckFileName(string file, TabControl tabControl)
+        {
+            if ((Path.GetExtension(file) == ".xml") || (Path.GetExtension(file) == ".XML"))
+            {
+                foreach (TabPage tabPage in tabControl.TabPages)
+                {
+                    TabPageManager tabPageManager = (TabPageManager)tabPage.Tag;
+                    if (tabPageManager.IOWorker.FilePath == Path.GetFullPath(file))
+                    {
+                        tabControl.SelectedTab = tabPage;
+                        return false;
+                    }
+                   
+                }
+                return true;
+            }
+            return false;
+        }
+
+        public bool OpenFile(TabPageManager tabPageManager, TabControl tabControl)
         {
             System.IO.Stream stream = null;
             OpenFileDialog openFileDialog = CreateOpenFileDialog();
@@ -115,8 +134,13 @@ namespace TraceParser
                 {
                     if ((stream = openFileDialog.OpenFile()) != null)
                     {
-                        SetIOWorkerProperties((stream as FileStream).Name);
-                        return true;
+                        if (CheckFileName((stream as FileStream).Name, tabControl))
+                        {
+                            SetIOWorkerProperties((stream as FileStream).Name);
+                            return true;
+                        }
+                          
+                        return false;
                     }
                 }
                 catch (XmlException xExc)

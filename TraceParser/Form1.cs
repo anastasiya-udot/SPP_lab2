@@ -20,6 +20,7 @@ namespace TraceParser
        
         public Form1()
         {
+  
             InitializeComponent();
             tabControl = CreateTabArea();
             CreateContextMenu(null);            
@@ -51,7 +52,7 @@ namespace TraceParser
     
             foreach (string file in droppedFiles)
             {
-                if ((Path.GetExtension(file) == ".xml") || (Path.GetExtension(file) == ".XML"))
+                if (CheckFileName(file))
                 {
                     TabPageManager tabPageManager = new TabPageManager();
                     IOWorker io = new IOWorker();
@@ -61,6 +62,25 @@ namespace TraceParser
                     CreateContextMenu(tabPageManager);
                 }
             }
+        }
+
+        private bool CheckFileName(string file)
+        {
+            if ((Path.GetExtension(file) == ".xml") || (Path.GetExtension(file) == ".XML"))
+            {
+                foreach (TabPage tabPage in tabControl.TabPages)
+                {
+                    TabPageManager tabPageManager = (TabPageManager)tabPage.Tag;
+                    if (tabPageManager.IOWorker.FilePath == Path.GetFullPath(file))
+                    {
+                        tabControl.SelectedTab = tabPage;
+                        return false;
+                    }
+                                
+                }
+                return true;
+            }
+            return false;
         }
 
         private void tabControl_Selecting(object sender, EventArgs e)
@@ -143,7 +163,7 @@ namespace TraceParser
             TabPageManager tabPageManager = new TabPageManager();
             IOWorker io = new IOWorker();
             tabPageManager.IOWorker = io;
-            if (io.OpenFile(tabPageManager))
+            if (io.OpenFile(tabPageManager, tabControl))
             {
                 tabPageManager.TreeViewBuilder = new TreeViewBuilder(io.FilePath);
                 CreateNewTabPage(tabPageManager);
